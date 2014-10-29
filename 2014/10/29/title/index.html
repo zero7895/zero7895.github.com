@@ -5,18 +5,54 @@
   
   <title>title | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is Nate’s first page.
-Test">
+  <meta name="description" content="[教學] 利用 hexo 在 github 上建立部落格  
+hexo是一套功能強大的Node.js網誌框架
+環境前置設定
+
+Node.js
+npm (Node.js的套件管理)
+git
+github帳號 (建立一個名為 {github帳號}.github.com 的 repository) 
+
+建立一個資料夾
+12mkdir myblogcd myblog
+
+建置網誌系統 
+1hexo init">
 <meta property="og:type" content="article">
 <meta property="og:title" content="title">
 <meta property="og:url" content="http://yoursite.com/2014/10/29/title/">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="This is Nate’s first page.
-Test">
+<meta property="og:description" content="[教學] 利用 hexo 在 github 上建立部落格  
+hexo是一套功能強大的Node.js網誌框架
+環境前置設定
+
+Node.js
+npm (Node.js的套件管理)
+git
+github帳號 (建立一個名為 {github帳號}.github.com 的 repository) 
+
+建立一個資料夾
+12mkdir myblogcd myblog
+
+建置網誌系統 
+1hexo init">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="title">
-<meta name="twitter:description" content="This is Nate’s first page.
-Test">
+<meta name="twitter:description" content="[教學] 利用 hexo 在 github 上建立部落格  
+hexo是一套功能強大的Node.js網誌框架
+環境前置設定
+
+Node.js
+npm (Node.js的套件管理)
+git
+github帳號 (建立一個名為 {github帳號}.github.com 的 repository) 
+
+建立一個資料夾
+12mkdir myblogcd myblog
+
+建置網誌系統 
+1hexo init">
 
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -86,8 +122,41 @@ Test">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="This_is_Nate’s_first_page-">This is Nate’s first page.</h2>
-<h2 id="Test">Test</h2>
+        <h1 id="[教學]_利用_hexo_在_github_上建立部落格_">[教學] 利用 hexo 在 github 上建立部落格  </h1>
+<h2 id="hexo是一套功能強大的Node-js網誌框架">hexo是一套功能強大的Node.js網誌框架</h2>
+<h3 id="環境前置設定">環境前置設定</h3>
+<ul>
+<li>Node.js</li>
+<li>npm (Node.js的套件管理)</li>
+<li>git</li>
+<li>github帳號 (建立一個名為 {github帳號}.github.com 的 repository) </li>
+</ul>
+<p>建立一個資料夾</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir myblog</div><div class="line"><span class="built_in">cd</span> myblog</div></pre></td></tr></table></figure>
+
+<p>建置網誌系統 </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
+
+<p>產生第一篇文章</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"title"</span></div></pre></td></tr></table></figure>
+
+<p>執行這個指令後，在 /source/_posts/ 裡面就會多了一個md檔案(title.md)</p>
+<p>利用markdown的語法 編輯title.md</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo server</div></pre></td></tr></table></figure>
+
+<p>這兩個指令會在public建立相對應的指令 以及 開啟一個測試的server</p>
+<p>接著利用瀏覽器打開localhost:4000 就可以看到第一篇部落格了！</p>
+<p>PS. 如果看到的不是自己的網頁 而是其他網頁的話<br>執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install hexo-renderer-ejs --save</div><div class="line">npm install hexo-renderer-stylus --save</div><div class="line">npm install hexo-renderer-marked --save</div></pre></td></tr></table></figure>
+
+<p>成功看到網頁後，接下來就是要發佈在github上了<br>首先先在myblog/_config.yml</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: github</div><div class="line">  repository: https://github.com/{你的帳號}/{你的帳號}.github.com.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+
+<p>最後輸入指令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+
+<p>連上{你的帳號}.github.io就可以看到部落格拉</p>
+<p>（一開始看到的是404 error，再等個十幾分鐘就成功了</p>
 
       
     </div>
