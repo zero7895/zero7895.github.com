@@ -63,6 +63,77 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hexo-introduce" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/29/hexo-introduce/" class="article-date">
+  <time datetime="2014-10-28T16:20:56.000Z" itemprop="datePublished">Oct 29 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/29/hexo-introduce/">title</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="[教學]_利用_hexo_在_github_上建立部落格">[教學] 利用 hexo 在 github 上建立部落格</h1>
+<h2 id="hexo是一套功能強大的Node-js網誌框架">hexo是一套功能強大的Node.js網誌框架</h2>
+<h3 id="環境前置設定">環境前置設定</h3>
+<ul>
+<li>Node.js</li>
+<li>npm (Node.js的套件管理)</li>
+<li>git</li>
+<li>github帳號 (建立一個名為 {github帳號}.github.com 的 repository) </li>
+</ul>
+<p>建立一個資料夾</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir myblog</div><div class="line"><span class="built_in">cd</span> myblog</div></pre></td></tr></table></figure>
+
+<p>建置網誌系統 </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
+
+<p>產生第一篇文章</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"title"</span></div></pre></td></tr></table></figure>
+
+<p>執行這個指令後，在 /source/_posts/ 裡面就會多了一個md檔案(title.md)</p>
+<p>利用markdown的語法 編輯title.md</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo server</div></pre></td></tr></table></figure>
+
+<p>這兩個指令會在public建立相對應的指令 以及 開啟一個測試的server</p>
+<p>接著利用瀏覽器打開localhost:4000 就可以看到第一篇部落格了！</p>
+<p>PS. 如果看到的不是自己的網頁 而是其他網頁的話<br>執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install hexo-renderer-ejs --save</div><div class="line">npm install hexo-renderer-stylus --save</div><div class="line">npm install hexo-renderer-marked --save</div></pre></td></tr></table></figure>
+
+<p>成功看到網頁後，接下來就是要發佈在github上了<br>首先先在myblog/_config.yml</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: github</div><div class="line">  repository: https://github.com/{你的帳號}/{你的帳號}.github.com.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+
+<p>最後輸入指令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+
+<p>連上{你的帳號}.github.io就可以看到部落格拉</p>
+<p>（一開始看到的是404 error，再等個十幾分鐘就成功了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/10/29/hexo-introduce/" data-id="27nn6xjb4x21yd7n" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-title" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/10/29/title/" class="article-date">
@@ -77,7 +148,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/29/title/">title格</a>
+      <a class="article-title" href="/2014/10/29/title/">title</a>
     </h1>
   
 
@@ -203,7 +274,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -215,7 +286,11 @@
       <ul>
         
           <li>
-            <a href="/2014/10/29/title/">title格</a>
+            <a href="/2014/10/29/hexo-introduce/">title</a>
+          </li>
+        
+          <li>
+            <a href="/2014/10/29/title/">title</a>
           </li>
         
           <li>
