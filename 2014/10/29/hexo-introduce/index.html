@@ -6,6 +6,7 @@
   <title>利用hexo 及 github 建置個人部落格 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="hexo是一套功能強大的Node.js網誌框架
+
 環境前置設定
 
 Node.js
@@ -13,21 +14,20 @@ npm (Node.js的套件管理)
 git
 github帳號 (建立一個名為 {github帳號}.github.com 的 repository) 
 
-建立一個資料夾
+1. 建立一個資料夾
 12mkdir myblogcd myblog
 
-建置網誌系統 
+2. 建置網誌系統
 1hexo init
 
-產生第一篇文章
-1hexo new 'title'
-
-執行">
+3. 產生第一篇文章
+1hexo new 't">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用hexo 及 github 建置個人部落格">
 <meta property="og:url" content="http://yoursite.com/2014/10/29/hexo-introduce/">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="hexo是一套功能強大的Node.js網誌框架
+
 環境前置設定
 
 Node.js
@@ -35,19 +35,18 @@ npm (Node.js的套件管理)
 git
 github帳號 (建立一個名為 {github帳號}.github.com 的 repository) 
 
-建立一個資料夾
+1. 建立一個資料夾
 12mkdir myblogcd myblog
 
-建置網誌系統 
+2. 建置網誌系統
 1hexo init
 
-產生第一篇文章
-1hexo new 'title'
-
-執行">
+3. 產生第一篇文章
+1hexo new 't">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用hexo 及 github 建置個人部落格">
 <meta name="twitter:description" content="hexo是一套功能強大的Node.js網誌框架
+
 環境前置設定
 
 Node.js
@@ -55,16 +54,14 @@ npm (Node.js的套件管理)
 git
 github帳號 (建立一個名為 {github帳號}.github.com 的 repository) 
 
-建立一個資料夾
+1. 建立一個資料夾
 12mkdir myblogcd myblog
 
-建置網誌系統 
+2. 建置網誌系統
 1hexo init
 
-產生第一篇文章
-1hexo new 'title'
-
-執行">
+3. 產生第一篇文章
+1hexo new 't">
 
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -135,6 +132,7 @@ github帳號 (建立一個名為 {github帳號}.github.com 的 repository)
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="hexo是一套功能強大的Node-js網誌框架">hexo是一套功能強大的Node.js網誌框架</h2>
+<hr>
 <h3 id="環境前置設定">環境前置設定</h3>
 <ul>
 <li>Node.js</li>
@@ -142,13 +140,13 @@ github帳號 (建立一個名為 {github帳號}.github.com 的 repository)
 <li>git</li>
 <li>github帳號 (建立一個名為 {github帳號}.github.com 的 repository) </li>
 </ul>
-<p>建立一個資料夾</p>
+<h4 id="1-_建立一個資料夾">1. 建立一個資料夾</h4>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir myblog</div><div class="line"><span class="built_in">cd</span> myblog</div></pre></td></tr></table></figure>
 
-<p>建置網誌系統 </p>
+<h4 id="2-_建置網誌系統">2. 建置網誌系統</h4>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
 
-<p>產生第一篇文章</p>
+<h4 id="3-_產生第一篇文章">3. 產生第一篇文章</h4>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"title"</span></div></pre></td></tr></table></figure>
 
 <p>執行這個指令後，在 /source/_posts/ 裡面就會多了一個md檔案(title.md)</p>
@@ -160,7 +158,9 @@ github帳號 (建立一個名為 {github帳號}.github.com 的 repository)
 <p>PS. 如果看到的不是自己的網頁 而是其他網頁的話<br>執行</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install hexo-renderer-ejs --save</div><div class="line">npm install hexo-renderer-stylus --save</div><div class="line">npm install hexo-renderer-marked --save</div></pre></td></tr></table></figure>
 
-<p>成功看到網頁後，接下來就是要發佈在github上了<br>首先先在myblog/_config.yml</p>
+<p>這樣就能在本機端看到自己的部落格了</p>
+<h4 id="4-_發佈至github">4. 發佈至github</h4>
+<p>首先先在myblog/_config.yml</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: github</div><div class="line">  repository: https://github.com/{你的帳號}/{你的帳號}.github.com.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 
 <p>最後輸入指令</p>
