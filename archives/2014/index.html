@@ -85,7 +85,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">control</span> + d</div></pre></td></tr></table></figure>
+        <h3 id="將執行中的程式放到背景執行">將執行中的程式放到背景執行</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">control</span> + z</div></pre></td></tr></table></figure>
+
+<h3 id="喚回背景中的程式">喚回背景中的程式</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fg</div></pre></td></tr></table></figure>
+
+<h3 id="查看正在執行的程式">查看正在執行的程式</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jobs</div></pre></td></tr></table></figure>
+
+<h3 id="查看所有的process">查看所有的process</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">top</span></div></pre></td></tr></table></figure>
+
+<h3 id="取得環境變數">取得環境變數</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">env</span></div></pre></td></tr></table></figure>
+
+<h3 id="增加_/example/bin_至_path，export的效果會在下次重新啟動bash失效，須將這行寫至~/-bashrc_profile">增加 /example/bin 至 path，export的效果會在下次重新啟動bash失效，須將這行寫至~/.bashrc_profile</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> /example/bin：<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
+
+<h3 id="在當前目錄下，尋找某個檔案">在當前目錄下，尋找某個檔案</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">find</span> . -name filename.txt</div></pre></td></tr></table></figure>
+
+<h3 id="在某個檔案中尋找字串">在某個檔案中尋找字串</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">grep</span> -<span class="keyword">n</span> targetStr filename.txt</div></pre></td></tr></table></figure>
+
+<h3 id="｜:pipe_將某個指令的結果pipe給另個指令">｜:pipe 將某個指令的結果pipe給另個指令</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ps</span> aux | <span class="keyword">grep</span> bash</div></pre></td></tr></table></figure>
+
+
 
 
       
