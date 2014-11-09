@@ -159,7 +159,7 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">find</span> . -name filename.txt</div></pre></td></tr></table></figure>
 
 <h3 id="在某個檔案中尋找字串">在某個檔案中尋找字串</h3>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">grep</span> -<span class="keyword">n</span> targetStr filename.txt</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">grep</span> -<span class="keyword">n</span> targetStr filename.txt </div><div class="line"><span class="keyword">grep</span> -<span class="keyword">n</span> -<span class="keyword">r</span> targetStr .</div></pre></td></tr></table></figure>
 
 <h3 id="｜:pipe_將某個指令的結果pipe給另個指令">｜:pipe 將某個指令的結果pipe給另個指令</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ps</span> aux | <span class="keyword">grep</span> bash</div></pre></td></tr></table></figure>
